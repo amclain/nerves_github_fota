@@ -32,6 +32,7 @@ defmodule NervesGithubFOTA.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {NervesGithubFOTA.Application, []},
       extra_applications: [:logger]
     ]
   end
@@ -51,6 +52,10 @@ defmodule NervesGithubFOTA.MixProject do
       {:espec, "~> 1.9", only: :test},
       {:excoveralls, "~> 0.16", only: :test},
       {:ex_doc, "~> 0.29", only: :dev, runtime: false},
+      {:httpoison, "~> 2.1"},
+      {:jason, "~> 1.4"},
+      {:nerves_hub_link_common, "~> 0.4"},
+      {:nerves_runtime, "~> 0.13"},
     ]
   end
 
